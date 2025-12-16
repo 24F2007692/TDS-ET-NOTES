@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDS End-Term Revision Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper-color: #fdfbf7;
+            --ink-color: #2c3e50;
+            --accent-red: #c0392b;
+            --accent-blue: #2980b9;
+            --highlight-yellow: rgba(255, 235, 59, 0.4);
+            --highlight-green: rgba(100, 255, 218, 0.3);
+            --highlight-pink: rgba(255, 100, 150, 0.2);
+            --line-color: #a4b0be;
+        }
+
+        body {
+            background-color: #e0e0e0;
+            font-family: 'Kalam', cursive;
+            margin: 0;
+            padding: 20px;
+            color: var(--ink-color);
+            line-height: 1.6;
+        }
+
+        .notebook-page {
+            background-color: var(--paper-color);
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 60px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            position: relative;
+            border-radius: 2px;
+            background-image: linear-gradient(var(--line-color) 1px, transparent 1px);
+            background-size: 100% 2.5rem; /* Line height spacing */
+            line-height: 2.5rem; /* Align text to lines */
+        }
+
+        /* Hole punches */
+        .notebook-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 100%;
+            width: 2px;
+            border-left: 2px solid rgba(255, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 2.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--accent-red);
+            text-decoration: underline;
+            text-decoration-style: wavy;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            border-bottom: 2px solid var(--ink-color);
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        p, li {
+            font-size: 1.25rem;
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        ul li::before {
+            content: '•';
+            color: var(--accent-red);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, var(--highlight-yellow) 0%, var(--highlight-yellow) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 80%;
+            padding: 0 2px;
+        }
+        
+        .highlight-green {
+            background: linear-gradient(120deg, var(--highlight-green) 0%, var(--highlight-green) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 80%;
+        }
+
+        .trap-box {
+            border: 2px solid var(--accent-red);
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background-color: rgba(255, 0, 0, 0.02);
+            transform: rotate(-1deg);
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+            line-height: 2rem;
+        }
+
+        .golden-rule {
+            border: 2px dashed #f39c12;
+            padding: 10px 20px;
+            margin: 15px 0;
+            background-color: rgba(243, 156, 18, 0.05);
+            font-weight: bold;
+            line-height: 2rem;
+        }
+
+        .meta-header {
+            text-align: center;
+            border: 3px solid var(--ink-color);
+            padding: 15px;
+            margin-bottom: 30px;
+            transform: rotate(1deg);
+            background: #fff;
+            line-height: 1.8rem;
+        }
+
+        code {
+            font-family: 'Patrick Hand', cursive; /* Keeping handwriting feel for code */
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            color: #d35400;
+        }
+
+        .watermark {
+            text-align: right;
+            margin-top: 50px;
+            font-size: 2rem;
+            color: rgba(44, 62, 80, 0.5);
+            font-family: 'Kalam', cursive;
+            transform: rotate(-2deg);
+        }
+
+        @media (max-width: 600px) {
+            .notebook-page {
+                padding: 20px 15px;
+                background-size: 100% 2rem;
+                line-height: 2rem;
+            }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.3rem; }
+            p, li { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="notebook-page">
+
+    <div class="meta-header">
+        <p><strong>TDS AI MASTER is online.</strong></p>
+        <p>Current Location: IIT Madras (Virtual Campus)</p>
+        <p>Mission: GENERATE DETAILED REVISION NOTES (POINTERS ONLY)</p>
+    </div>
+
+    <h1>TDS END-TERM: REVISION NOTES</h1>
+
+    <h2>1. EXAM META & STRATEGY</h2>
+    <ul>
+        <li><strong>Format:</strong> Computer-based, Mandatory section.</li>
+        <li><strong>Marking:</strong> No negative marking (Attempt ALL questions).</li>
+        <li><strong>Question Types:</strong> MCQ (One correct), MSQ (Multiple correct - <span style="color:red">High Risk</span>), Numeric (Exact integer/decimal), Scenario-based.</li>
+        <li><strong>Calculator:</strong> Sometimes enabled, but rarely needed for complex math.</li>
+    </ul>
+    <div class="golden-rule">
+        Golden Rule: If a question mentions "messy text data," the answer is almost always <span class="highlight">OpenRefine</span>.
+    </div>
+
+    <h2>2. DATA CLEANING & OPENREFINE</h2>
+    <ul>
+        <li><strong>Primary Use:</strong> Cleaning messy data, de-duplication, standardizing inconsistent text (e.g., "Google", "google", "Google Inc.").</li>
+        <li><strong>Key Feature:</strong> <span class="highlight">Clustering</span> (Fingerprint, N-gram). This is the specific technique to merge similar text values.</li>
+        <li><strong>Facet:</strong> Used to filter and group data to see frequency distributions.</li>
+        <li><strong>Exam Scenario:</strong> "You have a column with names like 'John Doe', 'john doe', 'John  Doe'. Which tool handles this best?" &rarr; <strong>OpenRefine</strong>.</li>
+    </ul>
+
+    <h2>3. PANDAS (PYTHON DATA ANALYSIS)</h2>
+    <div class="trap-box">
+        <strong>Unique Values (The #1 Trap):</strong><br>
+        <code>df['col'].unique()</code>: Returns an array/list of the distinct values themselves.<br>
+        <code>df['col'].nunique()</code>: Returns the integer count of unique values.<br>
+        <span style="color:red">Trap:</span> <code>distinct()</code> is SQL, not Pandas.
+    </div>
+    <ul>
+        <li><strong>Frequency:</strong> <code>df['col'].value_counts()</code> gives counts of unique items.</li>
+        <li><strong>Large Files:</strong> If a CSV is too big for memory, use <code>chunksize</code> in read_csv.</li>
+        <li><strong>Code:</strong> <code>pd.read_csv('file.csv', chunksize=10000)</code>.</li>
+        <li><strong>Read Formats:</strong> read_csv, read_excel, read_json, read_parquet.</li>
+    </ul>
+
+    <h2>4. DATA VISUALIZATION & STORYTELLING</h2>
+    <p><strong>Chart Selection Rules:</strong></p>
+    <ul>
+        <li><strong>Bar Chart:</strong> Comparing Categorical data (e.g., Sales by Region).</li>
+        <li><strong>Line Chart:</strong> Trends over Time (e.g., Stock prices over a year).</li>
+        <li><strong>Pie Chart:</strong> Proportions / Parts of a whole (e.g., Market share).</li>
+        <li><strong>Scatter Plot:</strong> Relationship/Correlation between two numerical variables.</li>
+        <li><strong>Histogram:</strong> Distribution of a single numerical variable.</li>
+        <li><strong>Box Plot:</strong> Identifying Outliers and distribution spread.</li>
+    </ul>
+    <p style="margin-top:1rem;"><strong>Storytelling Principles:</strong></p>
+    <ul>
+        <li><strong>Goal:</strong> Communicate insights, not just show data.</li>
+        <li><strong>Narrative:</strong> Must have a beginning (context), middle (analysis), and end (actionable conclusion).</li>
+        <li><strong>Context:</strong> Crucial for audience understanding. "Numbers without context are meaningless."</li>
+        <li><strong>Human Element:</strong> Good stories highlight the impact on real people.</li>
+    </ul>
+
+    <h2>5. EXCEL FEATURES (EXAM TRIGGERS)</h2>
+    <ul>
+        <li><strong>Forecast Sheet:</strong> Used for predicting future trends based on historical time-series data.</li>
+        <li><strong>Text to Columns:</strong> Splits a single column into multiple based on a delimiter (comma, tab, space).</li>
+        <li><span style="color:red">Trap:</span> If you select "Delimited" but forget to check a specific box (e.g., Comma), the text remains unchanged.</li>
+        <li><strong>Pivot Table:</strong> Summarizes large datasets (aggregation, grouping).</li>
+        <li><strong>Trigger Word:</strong> "Summarize", "Aggregate".</li>
+        <li><strong>VLOOKUP:</strong> Finds a value in a table row by matching a value in the first column.</li>
+        <li><strong>WEEKNUM:</strong> Returns the week number of a date.</li>
+        <li><span style="color:red">Trap:</span> <code>WEEKNUM(date, 2)</code> changes the week start day.</li>
+    </ul>
+
+    <h2>6. WEB, APIs, & SCRAPING</h2>
+    <p><strong>Chrome DevTools (F12):</strong></p>
+    <ul>
+        <li><strong>Network Tab:</strong> Inspects API calls, HTTP requests (GET/POST), response status, and payloads.</li>
+        <li><strong>Application Tab:</strong> Inspects Cookies, Local Storage, Session Storage.</li>
+        <li><strong>Console Tab:</strong> Shows JavaScript errors and logs.</li>
+    </ul>
+    <p><strong>HTTP Status Codes:</strong></p>
+    <ul>
+        <li>200-299: Success (OK, Created).</li>
+        <li>3xx: Redirection.</li>
+        <li>4xx: Client Error (404 Not Found, 429 Too Many Requests).</li>
+        <li>5xx: Server Error (500 Internal Server Error).</li>
+    </ul>
+    <p><strong>HTTP Methods:</strong></p>
+    <ul>
+        <li><strong>GET:</strong> Retrieve data (idempotent).</li>
+        <li><strong>POST:</strong> Send data to create a resource.</li>
+        <li><strong>PUT:</strong> Update a resource.</li>
+        <li><strong>DELETE:</strong> Remove a resource.</li>
+    </ul>
+    <p><strong>Scraping Ethics:</strong></p>
+    <ul>
+        <li><strong>Robots.txt:</strong> The file that tells scrapers what they can and cannot scrape. <span class="highlight">ALWAYS check this.</span></li>
+        <li><strong>Rate Limiting:</strong> Do not overload the server (avoid DDoS behavior).</li>
+        <li><strong>Privacy:</strong> Do NOT scrape personal data (PII) without consent.</li>
+    </ul>
+    <p><strong>Tools:</strong></p>
+    <ul>
+        <li><strong>BeautifulSoup:</strong> Parsing HTML/XML (static sites).</li>
+        <li><strong>Selenium/Playwright:</strong> Browser automation (dynamic/JS-heavy sites).</li>
+        <li><strong>Scrapy:</strong> Large-scale scraping framework.</li>
+    </ul>
+
+    <h2>7. DEPLOYMENT & VERSION CONTROL</h2>
+    <p><strong>Git (Version Control):</strong></p>
+    <ul>
+        <li><code>git init</code>: Initialize repo.</li>
+        <li><code>git add</code>: Stage changes.</li>
+        <li><code>git commit</code>: Save changes to history.</li>
+        <li><code>git push</code>: Upload to remote (GitHub/GitLab).</li>
+        <li><code>git pull</code>: Download and merge latest changes from remote. (Scenario: "Teammate updated code, how do I get it?")</li>
+        <li><code>.gitignore</code>: Specifies files intentionally untracked (e.g., passwords, large datasets).</li>
+    </ul>
+    <p><strong>Docker (Containerization):</strong></p>
+    <ul>
+        <li><strong>Purpose:</strong> Solves "It works on my machine" problem. Creates a consistent environment.</li>
+        <li><strong>Use Case:</strong> Dependency management, reproducible builds.</li>
+    </ul>
+    <p><strong>Streamlit:</strong></p>
+    <ul>
+        <li><strong>Purpose:</strong> Rapidly build interactive data apps in Python.</li>
+        <li><strong>Commands:</strong> <code>st.button()</code>, <code>st.text()</code> / <code>st.write()</code>.</li>
+        <li><span style="color:red">Trap:</span> There is no <code>st.add_text()</code>.</li>
+    </ul>
+
+    <h2>8. MACHINE LEARNING CONCEPTS</h2>
+    <p><strong>K-Means Clustering:</strong></p>
+    <ul>
+        <li><strong>Problem:</strong> Results can vary based on random initialization of centroids.</li>
+        <li><strong>Solution:</strong> Set the <code>n_init</code> parameter (runs algorithm multiple times and picks the best).</li>
+        <li><strong>K:</strong> Number of clusters. Small K = Underfitting risk? No, small K is usually distinct. Large K &rarr; Overfitting (clusters become single points).</li>
+    </ul>
+    <p><strong>ARIMA (Time Series):</strong></p>
+    <ul>
+        <li><strong>Notation:</strong> ARIMA(p, d, q) or order=(p, d, q).</li>
+        <li><strong>p:</strong> Autoregression (lags).</li>
+        <li><strong>d:</strong> Differencing (integration/stationarity).</li>
+        <li><strong>q:</strong> Moving Average.</li>
+        <li><span class="highlight">Trap:</span> Options often scramble this order (e.g., (d, p, q) is WRONG).</li>
+    </ul>
+    <p><strong>Statistics:</strong></p>
+    <ul>
+        <li><strong>p-value < 0.05:</strong> Statistically Significant. (Reject Null Hypothesis).</li>
+        <li><strong>Correlation (r):</strong>
+            <ul>
+                <li>+1: Perfect Positive.</li>
+                <li>-1: Perfect Negative.</li>
+                <li>0: No linear relationship.</li>
+            </ul>
+        </li>
+        <li><strong>Note:</strong> Correlation does NOT imply causation.</li>
+    </ul>
+
+    <h2>9. GEOSPATIAL ANALYSIS</h2>
+    <p><strong>Libraries:</strong></p>
+    <ul>
+        <li><strong>GeoPandas:</strong> Spatials operations (extends Pandas). Handles Shapefiles (.shp).</li>
+        <li><strong>Folium:</strong> Interactive maps (Leaflet.js wrapper).</li>
+        <li><strong>Shapely:</strong> Geometric objects (Point, Polygon).</li>
+    </ul>
+    <p><strong>Haversine Formula:</strong></p>
+    <ul>
+        <li><strong>Purpose:</strong> Calculate the Great Circle Distance between two points on a sphere (Earth) given Latitude and Longitude.</li>
+        <li><strong>Why not Euclidean?</strong> Euclidean distance creates a straight line through the earth (tunnel), which is wrong for surface travel.</li>
+    </ul>
+    <p><strong>Nominatim:</strong> API for geocoding (Address &rarr; Lat/Lon) and reverse geocoding.</p>
+
+    <h2>10. LLMs & PROMPT ENGINEERING</h2>
+    <ul>
+        <li><strong>Role of System Prompt:</strong> Defines the AI's persona, constraints, and behavior.</li>
+    </ul>
+    <p><strong>Educational AI (EduBot) Rules:</strong></p>
+    <ul>
+        <li><strong>Constraint:</strong> Do NOT give final answers or full code.</li>
+        <li><strong>Method:</strong> Guide the student, ask reflective questions, encourage critical thinking.</li>
+    </ul>
+    <p><strong>RAG (Retrieval-Augmented Generation):</strong></p>
+    <ul>
+        <li><strong>Workflow:</strong> User Query &rarr; Vectorize Query &rarr; Search Vector DB &rarr; Retrieve Context &rarr; Send Context + Query to LLM &rarr; LLM Response.</li>
+        <li><strong>Benefit:</strong> Reduces hallucinations, uses specific/private knowledge.</li>
+    </ul>
+    <p><strong>Prompting Strategy:</strong></p>
+    <ul>
+        <li><strong>Specific > Generic:</strong> "List 3 benefits of solar" is better than "Tell me about energy".</li>
+        <li><strong>Context:</strong> Providing context improves output quality.</li>
+        <li><strong>Cost:</strong> Longer prompts/responses = More tokens = Higher cost.</li>
+    </ul>
+
+    <h2>11. COMMAND LINE (BASH & AWK)</h2>
+    <p><strong>Bash Basics:</strong></p>
+    <ul>
+        <li><code>ls -la</code>: List all files (including hidden).</li>
+        <li><code>grep "pattern" file</code>: Search for text.</li>
+        <li><code>|</code> (Pipe): Passes output of one command as input to the next.</li>
+        <li><code>mv</code>: Move or Rename.</li>
+        <li><code>cp</code>: Copy.</li>
+    </ul>
+    <p><strong>Awk:</strong> Powerful text processing.</p>
+    <ul>
+        <li><code>NR</code>: Number of Records (current line number).</li>
+        <li><code>$1</code>: First column.</li>
+        <li><code>{sum+=$1} END {print sum}</code>: Sums the first column.</li>
+    </ul>
+
+    <h2>12. LOG ANALYSIS (SCENARIO)</h2>
+    <p><strong>Apache Log Format:</strong> <code>IP - - [Timestamp] "Method URL Protocol" Status Size "Referer" "UserAgent"</code></p>
+    <p><strong>Parsing Logic (Python):</strong></p>
+    <ul>
+        <li>Split string by spaces or regex.</li>
+        <li><strong>Timestamp:</strong> Need to handle timezone offset (%z).</li>
+    </ul>
+    <p><strong>Filtering:</strong></p>
+    <ul>
+        <li><strong>Success:</strong> 200 <= status < 300.</li>
+        <li><strong>Method:</strong> GET or POST.</li>
+        <li><strong>Time:</strong> Extract hour from parsed datetime object.</li>
+    </ul>
+
+    <h2>13. "NEVER CONFUSE" PAIRS</h2>
+    <div class="trap-box" style="transform: rotate(1deg);">
+        <ul>
+            <li><strong>unique()</strong> (List) vs <strong>nunique()</strong> (Count).</li>
+            <li><strong>Correlation</strong> (Strength of relationship) vs <strong>p-value</strong> (Significance of result).</li>
+            <li><strong>Network Tab</strong> (API traffic) vs <strong>Application Tab</strong> (Storage/Cookies).</li>
+            <li><strong>Git Pull</strong> (Download) vs <strong>Git Push</strong> (Upload).</li>
+            <li><strong>Euclidean Distance</strong> (Flat plane) vs <strong>Haversine Distance</strong> (Sphere/Earth).</li>
+        </ul>
+    </div>
+
+    <h3 style="text-align:center; color: var(--accent-red);">Final Check:</h3>
+    <ul style="border: 2px dashed var(--ink-color); padding: 20px; border-radius: 10px;">
+        <li>Messy Data? &rarr; <span class="highlight-green">OpenRefine</span>.</li>
+        <li>Forecast? &rarr; <span class="highlight-green">Excel Forecast Sheet</span>.</li>
+        <li>Interactive Map? &rarr; <span class="highlight-green">Folium</span>.</li>
+        <li>Web App? &rarr; <span class="highlight-green">Streamlit</span>.</li>
+        <li>Dependencies? &rarr; <span class="highlight-green">Docker</span>.</li>
+        <li>Team Updates? &rarr; <span class="highlight-green">Git Pull</span>.</li>
+    </ul>
+
+    <p style="text-align: center; font-size: 1.5rem; margin-top: 30px;">
+        <strong>Memorize these points. They are the keys to the exam.</strong>
+    </p>
+
+    <div class="watermark">~KarTik🍁</div>
+
+</div>
+
+</body>
+</html>
